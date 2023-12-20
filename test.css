@@ -1,36 +1,50 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap');
   /* font-family: 'Poppins', sans-serif;
   font-family: 'Rubik', sans-serif; */
+  :root {
+    --background-color: #161A30;
+    --accent-color: #31304D;
+    --secondary-color: #B6BBC4;
+    --primary-color: #F0ECE5;
+  }
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--background-color);
+    color: var(--primary-color);
     height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    
 }
-h1, h2, h3, h4 {
-  margin: 0;
+.body-load{
+  overflow: hidden;
+}
+h5, h6, p{
+  color: var(--primary-color);
+  font-family: 'Rubik', sans-serif;
+  font-weight: 100;
 }
 h2{
-  color: rgb(255, 255, 255);
+  color: var(--primary-color);
   text-transform: uppercase;
   font-family: 'Rubik', sans-serif;
   font-size: 30px;
   font-weight: 100;
 }
 h1{
-  color: rgb(197, 197, 255);
+  color: var(--primary-color);
   font-family: 'Rubik', sans-serif;
   font-weight: 100;
   font-size: 50px;
 }
 h3{
-  color: rgb(197, 197, 255);
+  color: var(--primary-color);
   font-family: 'Rubik', sans-serif;
+
 }
 h4{
-  color: rgb(197, 197, 255);
+  color: var(--primary-color);
   font-family: 'Rubik', sans-serif;
   font-weight: 100;
   font-size: 25px;
@@ -39,17 +53,50 @@ h4{
 nav{
   display: flex;
   justify-content: space-between;
-  height: 50px;
-  width: 98%;
+  height: 60px;
+  width: 96%;
   align-items: center;
-  padding: 1%;
+  padding: 1% 2%;
+  padding-bottom: 30px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 20%);
 }
+
 nav > div{
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
 }
+nav > div > img{
+  letter-spacing: 1px;
+  transform: scale(0.9);
+  transition: all ease 500ms;
+}
+nav:hover > div > img{
+  transform: scale(1);
+}
+nav h3{
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  padding: 0 10px;
+  transition: all ease 200ms;
+
+}
+nav h3:hover{
+  transform: scale(1.2);
+}
+nav .logo{
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+nav:hover > .logo{
+  transform: scale(1.05);
+  transition: all ease 500ms;
+}
+
 nav img{
   height: 50px;
 }
@@ -263,6 +310,17 @@ nav img{
     transform: translateY(0);
   }
 }
+@keyframes opacityAnimation2 {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
 
 
 #lines-1 {
@@ -292,4 +350,106 @@ nav img{
 
 #onload {
   display: none;
+}
+.home-bg{
+  position: absolute;
+  z-index: -100;
+  overflow: hidden;
+}
+.ccs1{
+  z-index: -50;
+  transform: translate(-200px, -500px) ;
+  transform-origin: center;
+}
+.ccs2{
+  z-index: -150;
+  transform: translate(-100px,-900px) ;
+  transform-origin: center;
+}
+.ccs3{
+  z-index: -50;
+  transform: translate(300px, -300px) scale(2);
+  animation: opacityAnimation2 6s infinite alternate;
+}
+#home-circles{
+  animation: opacityAnimation2 4s infinite alternate;
+  filter: blur(30px);
+  fill: var(--secondary-color);
+  transition: all ease 500ms;
+}
+#home:hover #home-circles{
+  filter: blur(10px);
+  transition: all ease 200ms;
+}
+#home > h1{
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transform: scale(0.9);
+  opacity: 0.8;
+  transition: all ease-out 300ms;
+}
+#home > h4{
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+  transition: all ease-out 300ms;
+}
+#home:hover > h1{
+  
+  transform: scale(1);
+  opacity: 1;
+}
+#home:hover > h1, #home:hover > h4{
+  transform: scale(1);
+  opacity: 1;
+}
+#about-us{
+  transform: translateY(-50px);
+  background-color: var(--accent-color);
+  border-radius: 0 40px 40px 0;
+  width: 80%;
+  padding: 20px;
+  min-height: 400px;
+}
+
+
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.about-us > div {
+  min-width: 200px;
+  min-height: 400px;
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  border: 1px solid var(--accent-color); /* You can use the accent color variable here */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.about-us h2 {
+  color: var(--primary-color); /* Use the primary color variable for heading text */
+}
+
+.about-us p {
+  color: var(--secondary-color); /* Use the secondary color variable for paragraph text */
+}
+
+.about-us img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.about-us h5 {
+  margin: 5px 0;
+  color: var(--primary-color); /* Use the primary color variable for heading text */
+}
+
+.about-us h6 {
+  margin: 5px 0;
+  opacity: 0.7; /* Use the accent color variable for subheading text */
 }
