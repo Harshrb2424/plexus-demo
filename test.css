@@ -352,8 +352,12 @@ nav img{
   display: none;
 }
 .home-bg{
+  
   position: absolute;
   z-index: -100;
+  overflow: hidden;
+}
+.home-bg *{
   overflow: hidden;
 }
 .ccs1{
@@ -367,6 +371,7 @@ nav img{
   transform-origin: center;
 }
 .ccs3{
+  overflow: hidden;
   z-index: -50;
   transform: translate(300px, -300px) scale(2);
   animation: opacityAnimation2 6s infinite alternate;
@@ -421,7 +426,7 @@ nav img{
 
 .about-us > div {
   min-width: 200px;
-  min-height: 400px;
+  min-height: 300px;
   flex: 1;
   margin: 0 10px;
   padding: 20px;
@@ -454,4 +459,46 @@ nav img{
   font-size: medium;
   margin: 5px 0;
   opacity: 0.7; /* Use the accent color variable for subheading text */
+}
+
+footer img{
+  height: 50px;
+}
+footer {
+  background-color: var(--accent-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+}
+.info{
+  width: 70%;
+  flex-direction: column;
+
+}
+footer .images{
+  
+
+  display: flex;
+  justify-content: space-around;
+}
+footer .images{
+  grid-column: span 2;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 16px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h1, h4{
+    margin: 0;
+  }
+  #home{
+    height: 80vh;
+    padding-bottom: 15vh;
+  }
 }
