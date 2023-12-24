@@ -343,6 +343,7 @@
                 <h3>Events</h3>
             </div>
         </nav>
+
         <section id="home">
             <h1>Where Minds Connect, Ideas Ignite, and Boundaries Fade Away</h1>
             <h4>Plexus Club, MRCE</h4>
@@ -563,6 +564,11 @@
 
             </div>
         </section>
+        <section class="video">
+            <video id="video" autoplay="true" muted="muted" loop>
+                <source src="./images/The+promo+shoot+of+plexus,+making+video-_1.mp4" type="video/mp4">
+              </video>
+        </section>
         <section id="about-us" class="move-left">
             <div>
                 <h2>About Us</h2>
@@ -724,7 +730,7 @@
             </div>
         </section>
 
-        <section id="event">
+        <!-- <section id="event">
             <h1>Events</h1>
             <div id="events">
                 <div class="event">
@@ -740,7 +746,7 @@
                     <p class="centered">Testing</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <footer>
@@ -781,9 +787,18 @@
                 setTimeout(function () {
                     $('#loader').fadeOut();
                     $("#onload").fadeIn(2000);
-                    $("body").removeClass("body-load")
+                    $("body").removeClass("body-load");
+                    // document.getElementById('video').play();
+                    // $("#video").trigger('play');
                 }, 500);
             }, 500);
+
+            setTimeout(function() {
+                // Scroll to the element with id "video"
+                $('html, body').animate({
+                    scrollTop: $('#video').offset().top
+                }, 1000); // You can adjust the duration of the scroll animation (in milliseconds)
+            }, 5000); // 5000 milliseconds (5 seconds)
         });
     </script>
 </body>
