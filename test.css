@@ -434,6 +434,7 @@ body *{
 }
 
 #about-us{
+  margin-bottom: 50px;
   /* transform: translateY(10vh); */
   position: relative;
   z-index: -10;
