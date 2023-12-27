@@ -777,28 +777,29 @@
 
 
         $(document).ready(function () {
-            // Show the loader initially
-            // Fade out the loader when the entire website is loaded
-
             setTimeout(function () {
-                // Your code here to indicate the loading process is complete
-                // For demonstration purposes, fading out the loader after 1 second
                 $('.bg').fadeOut();
                 setTimeout(function () {
                     $('#loader').fadeOut();
                     $("#onload").fadeIn(2000);
                     $("body").removeClass("body-load");
-                    // document.getElementById('video').play();
-                    // $("#video").trigger('play');
+                    $('#video').on('click', function() {
+                        var video = document.getElementById('video');
+                        if (video.paused) {
+                            $(video).animate({ opacity: 1 }, 200);
+                            video.play();
+                        } else {
+                            $(video).animate({ opacity: 0.6 }, 200);
+                        video.pause();
+                        }
+                    });
                 }, 500);
             }, 500);
-
             setTimeout(function() {
-                // Scroll to the element with id "video"
                 $('html, body').animate({
                     scrollTop: $('#video').offset().top
-                }, 1000); // You can adjust the duration of the scroll animation (in milliseconds)
-            }, 5000); // 5000 milliseconds (5 seconds)
+                }, 1000); 
+            }, 5000);
         });
     </script>
 </body>
