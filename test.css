@@ -696,3 +696,12 @@ footer img{
   transform: translate(-50%, -50%); */
   transition: .4s;
 }
+
+footer h5{
+  color: var(--secondary-color);
+  grid-column: span 2;
+  text-align: center;
+}
+footer h5 a{
+  color: var(--primary-color);
+}
