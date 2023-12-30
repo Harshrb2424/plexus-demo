@@ -334,13 +334,13 @@
 
     <div id="onload">
         <nav>
-            <div class="logo">
+            <div class="logo click-home">
                 <img src="./logo-plexus.svg" alt="Plexus-SVG">
                 <h2>Plexus</h2>
             </div>
             <div>
-                <h3>About Us</h3>
-                <h3>Projects</h3>
+                <h3 class="click-aboutUs">About Us</h3>
+                <h3 class="click-Projects">Projects</h3>
             </div>
         </nav>
 
@@ -565,9 +565,9 @@
             </div>
         </section>
         <section class="video">
-            <video id="video" autoplay="true" muted="muted" loop>
-                <source src="./images/The+promo+shoot+of+plexus,+making+video-_1.mp4" type="video/mp4">
-              </video>
+                <video id="video" autoplay="true" muted="muted" loop>
+                    <source src="./images/The+promo+shoot+of+plexus,+making+video-_1.mp4" type="video/mp4">
+                  </video>
         </section>
         <section id="about-us" class="move-left">
             <div>
@@ -729,6 +729,11 @@
                 </div>
             </div>
         </section>
+        <section id="projects">
+            <div>
+                <h1>Project</h1>
+            </div>
+        </section>
 
         <!-- <section id="event">
             <h1>Events</h1>
@@ -751,14 +756,14 @@
 
         <footer>
             <div class="logo">
-                <img src="./images/mrce.png" alt="MRCE-logo-PNG">
+                <img src="https://www.facultyplus.com/wp-content/uploads/2018/10/MRGI.png" alt="">
+                <img class="curve" src="./images/mrce.png" alt="MRCE-logo-PNG">
+                <img src="./logo-plexus.svg" alt="Plexus-SVG">
             </div>
             <div class="info">
                 <h3>Malla Reddy Group of Institutes</h3>
                 <h4>Malla Reddy College Of Engineering - [MRCE]</h4>
-                <p>Maisamaguda, Dhulapally, post via Kompally</p>
-                <p>Secunderabad - 500100</p>
-                <p>Telangana, India</p>
+                <p>Maisamaguda, Dhulapally, post via Kompally Secunderabad - 500100 Telangana, India</p>
             </div>
 
             <div class="images">
@@ -789,7 +794,7 @@
                             $(video).animate({ opacity: 1 }, 200);
                             video.play();
                         } else {
-                            $(video).animate({ opacity: 0.6 }, 200);
+                            $(video).animate({ opacity: 0.7 }, 200);
                         video.pause();
                         }
                     });
@@ -800,6 +805,42 @@
                     scrollTop: $('#video').offset().top
                 }, 1000); 
             }, 5000);
+
+            var $homeBg = $('.home-bg');
+
+// Attach a scroll event handler to the window
+$(window).scroll(function() {
+  // Get the scroll position
+  var scrollY = $(this).scrollTop();
+    console.log(scrollY);
+  // Update the transform property of .home-bg
+  if (scrollY < 400) {
+    
+      $homeBg.css('transform', 'translateY(' + (scrollY/2) + 'px)');
+  }
+});
+
+
+    $(".click-home").click(function() {
+        $('#home').fadeIn();
+        $('#video').fadeIn();
+        $('#about-us').fadeIn();
+        $('#projects').fadeIn();
+      });
+
+    $(".click-aboutUs").click(function() {
+        $('#home').fadeOut();
+        $('#video').fadeOut();
+        $('#about-us').fadeIn();
+        $('#projects').fadeOut();
+      });
+    $(".click-Projects").click(function() {
+        $('#home').fadeOut();
+        $('#video').fadeOut();
+        $('#about-us').fadeOut();
+        $('#projects').fadeIn();
+      });
+
         });
     </script>
 </body>

@@ -112,7 +112,7 @@ nav img{
     background-color: red;
   }
   #loader{
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -355,7 +355,7 @@ body *{
   display: none;
 }
 .home-bg{
-  
+  transition: all ease-in-out 1s;
   position: absolute;
   z-index: -100;
   overflow: hidden;
@@ -510,6 +510,8 @@ footer {
   padding: 20px;
   width: 70%;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
 
 }
 footer .images{
@@ -518,8 +520,6 @@ footer .images{
   display: flex;
   justify-content: flex-end;
   border: 20px;
-}
-footer .images{
   grid-column: span 2;
 }
 footer .logo{
@@ -528,8 +528,11 @@ footer .logo{
   align-items: center;
 }
 footer .logo img{
+  width: 40%;
+  height: auto;
+}
+footer .logo .curve{
   border-radius: 50%;
-  height: 200px;
 }
 footer img{
   height: 75px;
@@ -619,8 +622,12 @@ h3{
 .info{
   width: 100%;
 }
+footer .logo {
+  gap: 15px;
+  flex-direction: column;
+}
 footer .logo img {
-  height: auto;
+  width: 100%;
 }
 footer .images{
   gap: 10px;
@@ -705,3 +712,4 @@ footer h5{
 footer h5 a{
   color: var(--primary-color);
 }
+
