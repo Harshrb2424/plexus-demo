@@ -8,9 +8,10 @@
     --primary-color: #F0ECE5;
   }
 body{
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    height: 100vh;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  height: 100vh;
+  padding: 0 2%;
     width: auto;
     padding: 0;
     margin: 0;
@@ -53,7 +54,7 @@ nav{
   height: 60px;
   width: auto;
   align-items: center;
-  padding: 1% 2%;
+  padding: 1% 0%;
   padding-bottom: 30px;
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 20%);
