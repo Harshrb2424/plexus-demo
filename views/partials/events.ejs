@@ -1,0 +1,50 @@
+<section id="events">
+    <div  class="move-right">
+        <h1>Project</h1>
+        <% events.forEach(event => { %>
+            <div>
+                <img src="<%= event.event_image %>" alt="">
+                <div>
+                    <h2><%= event.title %></h2>
+                    <h5><%= new Date(event.start_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }); %></h5>
+                    <h4><%= event.organization %></h4>
+                </div>
+            </div>
+        <% }) %>
+        <!-- <div>
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*AXF8IYKqC3Y7JxYRaUrCPQ.png" alt="">
+            <div>
+                <h2>Hackathons and Coding Competitions</h2>
+                <h4>Techincal Event</h4>
+            </div>
+        </div>
+        <div>
+            <img src="https://olathens.gr/wp-content/uploads/2023/11/1.png" alt="">
+            <div>
+               <h2>Workshops and Tech Talks</h2>
+            <h4>Techincal Event</h4>
+           </div>
+        </div>
+        <div>
+            <img src="https://bugfender.com/wp-content/uploads/2022/09/Screenshot_2022-09-27_at_6.58.35_PM.png" alt="">
+            <div>
+                <h2>Open Source Contributions</h2>
+                <h4>Techincal Event</h4>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/1627657997/vector/stack-of-books-and-cup-of-coffee.jpg?s=612x612&w=0&k=20&c=BaoPIkC97eF1XC3u7v4xIsOzFrfoBWj3Z6X6nlPjvyk=" alt="">
+            <div>
+                <h2>Book Club</h2>
+                <h4>Non Techincal Event</h4>
+            </div>
+        </div>
+        <div>
+            <img src="https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2022/04/22105651/30-day-fitness-challenges-600-t-minus-30.png" alt="">
+            <div>
+                <h2>Fitness Challenges</h2>
+                <h4>Sports Event</h4>
+            </div>
+        </div> -->
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<nav>
+    <div class="logo click-home">
+        <img src="./logo-plexus.svg" alt="Plexus-SVG">
+        <h2>Plexus</h2>
+    </div>
+    <div class="nav">
+        <h3 class="click-aboutUs">About Us</h3>
+        <h3 class="click-Projects">Projects</h3>
+        <% if (locals.UserProfile.displayName) { %>
+            <img src="<%= UserProfile.photos[0].value %>" alt="">
+            <% } else { %>
+                <h3 class="click-Login">Login</h3>
+          <% } %>
+    </div>
+</nav>
