@@ -341,9 +341,14 @@
                 <img src="./logo-plexus.svg" alt="Plexus-SVG">
                 <h2>Plexus</h2>
             </div>
-            <div>
+            <div class="nav">
                 <h3 class="click-aboutUs">About Us</h3>
                 <h3 class="click-Projects">Projects</h3>
+                <% if (locals.displayName) { %>
+                    <img src="<%= photos[0].value %>" alt="">
+                    <% } else { %>
+                        <h3 class="click-Login">Login</h3>
+                  <% } %>
             </div>
         </nav>
         <div class="circles">
@@ -905,6 +910,9 @@
                 $('#video').fadeOut();
                 $('#about-us').fadeOut();
                 $('#projects').fadeIn();
+            });
+            $(".click-Login").click(function () {
+                window.location.href = "./auth/google";
             });
             $("#events").click(function () {
                 window.location.href = "./event";

@@ -4,6 +4,7 @@ font-family: 'Rubik', sans-serif; */
 :root {
   --background-color: #161a30;
   --accent-color: #31304d;
+  --accent-light-color: rgb(184, 184, 255);
   --secondary-color: #b6bbc4;
   --primary-color: #f0ece5;
 }

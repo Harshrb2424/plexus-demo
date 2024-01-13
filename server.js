@@ -5,6 +5,8 @@ const passport = require ('passport');
 const GoogleStrategy = require ('passport-google-oauth20').Strategy;
 require('dotenv').config();
 
+let UserProfile = {};
+
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -12,6 +14,7 @@ passport.use(new GoogleStrategy({
   },
   (accessToken, refreshToken, profile, done) => {
     console.log(profile);
+    UserProfile = profile;
     // Store user information in the database or session
     return done(null, profile);
   }
@@ -65,7 +68,7 @@ app.get('/logout', (req, res) => {
   res.redirect('/');
 });
 app.get('/', (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", UserProfile);
 });
 
 app.get('/event', (req, res) => {
