@@ -4,7 +4,16 @@ const path = require('path');
 const passport = require ('passport');
 const GoogleStrategy = require ('passport-google-oauth20').Strategy;
 require('dotenv').config();
-
+const pg = require ('pg');
+const client = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "NodeProjects",
+  password: "2424",
+  port: 2424,
+});
+client.connect();
+// client.end();
 let UserProfile = {};
 
 passport.use(new GoogleStrategy({
@@ -67,13 +76,17 @@ app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
 });
-app.get('/', (req, res) => {
-  res.render("index.ejs", UserProfile);
+app.get('/', async (req, res) => {
+  const result = await client.query("SELECT * FROM public.plexus_events");
+  // const res = await client.query('', ['']);
+  console.log(result.rows);
+  const events = result.rows;
+  res.render("pages/index.ejs", {UserProfile, events});
 });
 
 app.get('/event', (req, res) => {
   if (req.isAuthenticated()) {
-      res.render("event.ejs");
+      res.render("pages/event.ejs");
     } else {
       res.redirect('/auth/google');
 }
