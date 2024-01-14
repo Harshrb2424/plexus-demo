@@ -1,0 +1,26 @@
+#event-showcase{
+    height: 80vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30%;
+}
+#event-showcase > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+#event-showcase img{
+    height: 100vh;
+}
+#event-showcase > div > div{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: rgb(148,26,26);
+background: linear-gradient(0deg, rgba(148,26,26,1) 8%, rgba(148,26,26,0) 36%);
+}

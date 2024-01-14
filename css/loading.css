@@ -1,0 +1,235 @@
+#loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* display: none; */
+}
+#loader > svg {
+  animation: logo-scale-animation 1.2s infinite
+    cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.bg {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100%;
+  z-index: -100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.svg-bg {
+  height: 100vh;
+}
+body * {
+  overflow: hidden;
+}
+.bg svg {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: -100;
+}
+@keyframes logo-scale-animation {
+  0% {
+    transform: scale(0.95);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+}
+
+.dots {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 40px;
+}
+.dots div {
+  position: absolute;
+  top: 13px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.dots div:nth-child(1) {
+  left: 8px;
+  animation: dot1 0.6s infinite;
+}
+.dots div:nth-child(2) {
+  left: 8px;
+  animation: dot2 0.6s infinite;
+}
+.dots div:nth-child(3) {
+  left: 32px;
+  animation: dot2 0.6s infinite;
+}
+.dots div:nth-child(4) {
+  left: 56px;
+  animation: dot3 0.6s infinite;
+}
+@keyframes dot1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dot3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes dot2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+}
+
+#wave-1,
+#wave-2,
+#wave-3 {
+  transform-origin: center;
+}
+#wave-1 {
+  animation: waveAnimation 4s infinite alternate;
+  animation-delay: 0.2s;
+}
+
+#wave-2 {
+  animation: waveAnimation 4s infinite alternate;
+  animation-delay: 0.4s;
+}
+
+#wave-3 {
+  animation: waveAnimation 4s infinite alternate;
+  animation-delay: 0.6s;
+}
+#curve-1 {
+  animation: waveAnimation 4s infinite ease alternate;
+  animation-delay: 0.2s;
+}
+
+#curve-2 {
+  animation: waveAnimation 4s infinite ease alternate;
+  animation-delay: 0.4s;
+}
+
+#curve-3 {
+  animation: waveAnimation 4s infinite ease alternate;
+  animation-delay: 0.6s;
+}
+
+@keyframes opacityAnimation1 {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes opacityAnimation2 {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+:root {
+  --total-paths: 26;
+}
+
+@keyframes opacityAnimation1 {
+  0% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-15px, 15px);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+@keyframes opacityAnimation2 {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+#lines-1 {
+  animation: opacityAnimation1 5s infinite alternate;
+  animation-delay: 1s;
+}
+#lines-2 {
+  animation: opacityAnimation1 6s infinite alternate;
+  animation-delay: 2s;
+}
+#lines-3 {
+  animation: opacityAnimation1 5s infinite alternate;
+  animation-delay: 1s;
+}
+#lines-4 {
+  animation: opacityAnimation1 6s infinite alternate;
+  animation-delay: 2s;
+}
+#ellipse-1 {
+  animation: opacityAnimation1 15s infinite alternate;
+  animation-delay: 0s;
+}
+#ellipse-2 {
+  animation: opacityAnimation1 12s infinite alternate;
+  animation-delay: 0.2s;
+}
