@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head.ejs') %>
+    <%- include('../partials/head.ejs', {css: ['index']}) %>
 <body class="body-load">
     <div id="loader">
         <svg width="100" height="100" viewBox="0 0 458 299" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -811,9 +811,9 @@
             $(".click-Login").click(function () {
                 window.location.href = "./auth/google";
             });
-            $("#events").click(function () {
-                window.location.href = "./event";
-            });
+            // $("#events").click(function () {
+            //     window.location.href = "./event";
+            // });
 
         });
     </script>

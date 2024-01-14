@@ -197,15 +197,3 @@ footer a {
   color: var(--primary-color);
 }
 
-#events > div > div{
-  padding: 20px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-    }
-    #events > div > div img{
-      width: 200px;
-    }
-    #events > div > div img{
-      border-radius: 20px;
-    }

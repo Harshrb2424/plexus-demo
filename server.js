@@ -49,6 +49,7 @@ app.use(require('express-session')({ secret: 'your-secret-key', resave: true, sa
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 // Routes
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile', 'email'] })
@@ -89,9 +90,40 @@ app.get('/event', (req, res) => {
       res.render("pages/event.ejs");
     } else {
       res.redirect('/auth/google');
-}
+    }
 });
 
+app.get('/event/:eventId', async (req, res) => {
+  const query = `SELECT
+  pe.id AS event_id,
+  pe.title AS event_title,
+  pe.description AS event_description,
+  pe.start_date AS event_start_date,
+  pe.end_date AS event_end_date,
+  pe.location AS event_location,
+  pe.organization AS event_organization,
+  po.name AS organization_name,
+  po.heads AS organization_heads,
+  po.members AS organization_members,
+  po.description AS organization_description,
+  pe.event_image AS event_image_link,
+  pe.event_background AS event_background_link,
+  pe.created_at AS event_created_at
+FROM
+  plexus_events pe
+JOIN
+  plexus_organizations po ON pe.organization = po.name
+WHERE
+  pe.title ILIKE ($1)
+`;
+  // const eventId = await ;
+  const result = await client.query(query, [req.params.eventId.replace(/_/g, ' ')]);
+  if (req.isAuthenticated()) {
+    res.render("pages/event.ejs", {event: result.rows[0], UserProfile});
+  } else {
+    res.redirect('/auth/google');
+  }
+});
 function isAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();

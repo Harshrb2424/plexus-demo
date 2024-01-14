@@ -2,7 +2,7 @@
     <div  class="move-right">
         <h1>Project</h1>
         <% events.forEach(event => { %>
-            <div>
+            <div onclick="window.location.href='./event/<%= event.title.replace(/\s+/g, '_'); %>'">
                 <img src="<%= event.event_image %>" alt="">
                 <div>
                     <h2><%= event.title %></h2>

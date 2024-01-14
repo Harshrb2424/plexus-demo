@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/meta.css" />
-        <link rel="stylesheet" href="./css/main.css" />
-        <!-- <link rel="stylesheet" href="loading.css" /> -->
-        <link rel="stylesheet" href="./css/event.css" />
-        <link rel="shortcut icon" href="./logo-plexus.svg" type="image/x-icon">
-        <title>Plexus</title>
-    </head>
+    <%- include('../partials/head.ejs', {css: ['event']}) %>
 <body>
-    <nav>
-        <div class="logo click-home">
-            <img src="./logo-plexus.svg" alt="Plexus-SVG">
-            <h2>Plexus</h2>
-        </div>
-        <div>
-            <h3 class="click-aboutUs">About Us</h3>
-            <h3 class="click-Projects">Projects</h3>
-        </div>
-    </nav>
+    <%- include('../partials/nav.ejs') %>
     <div class="circles">
         <svg id="circle-1" class="circle" width="200" height="200">
             <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
@@ -39,20 +21,26 @@
         </svg>
     </div>
     <section id="event-showcase">
-        <h1>Plexus CodeFest 2024</h1>
-        <h2>24th-25th Jan</h2>
+        <% console.log("event"); %>
+        <% console.log(event); %>
+        <h1><%= event["event_title"] %></h1>
+        <!-- <h1>Plexus CodeFest 2024</h1> -->
+        <h2><%= new Date(event["event_start_date"]).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }); %></h2>
         <button>Register Now</button>
-        <img src="https://wallpapers.com/images/featured/technology-w65hwkhmusntb0j9.jpg" alt="">
+        <div>
+            <img src="<%= event["event_background_link"] %>" alt="">
+            <div></div>
+        </div>
     </section>
     <section id="event-info">
         <h2>Overview:</h2>
-        <p>Plexus CodeFest 2024 is an exciting opportunity for coding enthusiasts to showcase their skills, collaborate on innovative projects, and compete for exciting prizes. This event is organized by the technical club Plexus, with the aim of fostering a culture of creativity, problem-solving, and collaboration among students.</p>
+        <p><%= event["event_description"] %></p>
     
         <h2>Date and Venue:</h2>
         <ul>
-            <li><strong>Date:</strong> [Insert Date]</li>
+            <li><strong>Date:</strong> <%= new Date(event["event_start_date"]).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }); %></li>
             <li><strong>Time:</strong> [Insert Time]</li>
-            <li><strong>Venue:</strong> [Insert Venue]</li>
+            <li><strong>Venue:</strong> <%= event["event_location"] %></li>
         </ul>
     
         <h2>Event Format:</h2>
@@ -79,7 +67,20 @@
             <li><strong>Registration Fee:</strong> [If applicable, mention the fee and any early bird discounts]</li>
             <li><strong>Registration Process:</strong> Participants can register through an online portal on the Plexus website.</li>
         </ul>
-    
+        <h2><%= event["organization_name"] %></h2>
+        <p><%= event["organization_description"] %></p>
+        <h3>Heads</h3>
+        <ul>
+            <% event["organization_heads"].forEach(head => { %>
+                <li><%= head %></li>
+            <% }) %>
+        </ul>
+        <h3>Members</h3>
+        <ul>
+            <% event["organization_members"].forEach(member => { %>
+                <li><%= member %></li>
+            <% }) %>
+        </ul>
     </section>
     <!-- Add other sections as needed -->
     <footer>

@@ -1,4 +1,3 @@
-/*? HOME BG */
 #home {
   height: 80vh;
   width: auto;
@@ -147,3 +146,23 @@
   margin: 5px 0;
   opacity: 0.7; /* Use the accent color variable for subheading text */
 }
+
+
+
+#events > div > div{
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#events > div > div img{
+  width: 200px;
+}
+#events > div > div img{
+  border-radius: 20px;
+  aspect-ratio: 1/1;
+  max-width: 20%;
+  min-width: 100px;
+  object-fit: cover;
+}
+
