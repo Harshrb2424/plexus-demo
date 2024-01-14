@@ -1,14 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="./css/meta.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
+    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
+    
+        <link rel="stylesheet" href="./css/index.css" />
+    
     <link rel="shortcut icon" href="./logo-plexus.svg" type="image/x-icon">
     <title>Plexus</title>
 </head>
-
 <body class="body-load">
     <div id="loader">
         <svg width="100" height="100" viewBox="0 0 458 299" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -334,29 +339,62 @@
 
     <div id="onload">
         <nav>
-            <div class="logo click-home">
-                <img src="./logo-plexus.svg" alt="Plexus-SVG">
-                <h2>Plexus</h2>
-            </div>
-            <div>
-                <h3 class="click-aboutUs">About Us</h3>
-                <h3 class="click-Projects">Projects</h3>
-            </div>
-        </nav>
-
+    <div class="logo click-home">
+        <img src="./logo-plexus.svg" alt="Plexus-SVG">
+        <h2>Plexus</h2>
+    </div>
+    <div class="nav">
+        <h3 class="click-aboutUs">About Us</h3>
+        <h3 class="click-Projects">Projects</h3>
+        
+                <h3 class="click-Login">Login</h3>
+          
+    </div>
+</nav>
+        <div class="circles">
+            <svg id="circle-1" class="circle" width="200" height="200">
+                <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+            <svg id="circle-2" class="circle" width="200" height="200">
+                <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+            <svg id="circle-3" class="circle" width="200" height="200">
+                <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+            <svg id="circle-4" class="circle" width="200" height="200">
+                <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+            <svg id="circle-5" class="circle" width="200" height="200">
+                <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+        </div>
         <section id="home">
             <h1>Where Minds Connect, Ideas Ignite, and Boundaries Fade Away</h1>
             <h4>Plexus Club, MRCE</h4>
             <div class="home-bg">
-                <svg class="svg-bg" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- <svg class="svg-bg" height="1080" viewBox="0 0 1920 1080" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <g id="12" clip-path="url(#clip0_10_351)">
                         <g id="home-circles">
-                    <path id="Vector"   d="M1159 718C1311.98 718 1436 593.983 1436 441C1436 288.017 1311.98 164 1159 164C1006.02 164 882 288.017 882 441C882 593.983 1006.02 718 1159 718Z" fill="#B8B8FF"/>
-                    <path id="Vector_2" d="M120 365C158.66 365 190 333.66 190 295C190 256.34 158.66 225 120 225C81.3401 225 50 256.34 50 295C50 333.66 81.3401 365 120 365Z" fill="#B8B8FF"/>
-                    <path id="Vector_3" d="M173 863C268.545 863 346 785.545 346 690C346 594.455 268.545 517 173 517C77.4547 517 0 594.455 0 690C0 785.545 77.4547 863 173 863Z" fill="#B8B8FF"/>
-                    <path id="Vector_4" d="M773 968C873.516 968 955 886.516 955 786C955 685.484 873.516 604 773 604C672.484 604 591 685.484 591 786C591 886.516 672.484 968 773 968Z" fill="#B8B8FF"/>
-                    <path id="Vector_5" d="M1466 214C1525.09 214 1573 166.094 1573 107C1573 47.9055 1525.09 0 1466 0C1406.91 0 1359 47.9055 1359 107C1359 166.094 1406.91 214 1466 214Z" fill="#B8B8FF"/>
-                    <path id="Vector_6" d="M459 476C586.025 476 689 373.025 689 246C689 118.975 586.025 16 459 16C331.975 16 229 118.975 229 246C229 373.025 331.975 476 459 476Z" fill="#B8B8FF"/>
+                            <path id="Vector"
+                                d="M1159 718C1311.98 718 1436 593.983 1436 441C1436 288.017 1311.98 164 1159 164C1006.02 164 882 288.017 882 441C882 593.983 1006.02 718 1159 718Z"
+                                fill="#B8B8FF" />
+                            <path id="Vector_2"
+                                d="M120 365C158.66 365 190 333.66 190 295C190 256.34 158.66 225 120 225C81.3401 225 50 256.34 50 295C50 333.66 81.3401 365 120 365Z"
+                                fill="#B8B8FF" />
+                            <path id="Vector_3"
+                                d="M173 863C268.545 863 346 785.545 346 690C346 594.455 268.545 517 173 517C77.4547 517 0 594.455 0 690C0 785.545 77.4547 863 173 863Z"
+                                fill="#B8B8FF" />
+                            <path id="Vector_4"
+                                d="M773 968C873.516 968 955 886.516 955 786C955 685.484 873.516 604 773 604C672.484 604 591 685.484 591 786C591 886.516 672.484 968 773 968Z"
+                                fill="#B8B8FF" />
+                            <path id="Vector_5"
+                                d="M1466 214C1525.09 214 1573 166.094 1573 107C1573 47.9055 1525.09 0 1466 0C1406.91 0 1359 47.9055 1359 107C1359 166.094 1406.91 214 1466 214Z"
+                                fill="#B8B8FF" />
+                            <path id="Vector_6"
+                                d="M459 476C586.025 476 689 373.025 689 246C689 118.975 586.025 16 459 16C331.975 16 229 118.975 229 246C229 373.025 331.975 476 459 476Z"
+                                fill="#B8B8FF" />
                         </g>
                     </g>
                     <defs>
@@ -364,8 +402,9 @@
                             <rect width="1920" height="1080" fill="white" />
                         </clipPath>
                     </defs>
-                </svg>
-                <svg class="ccs1" width="300" height="300" viewBox="0 0 164 164" fill="none"
+                </svg> -->
+                <div class="loopss">
+                    <svg class="loops" id="loops-1" width="300" height="300" viewBox="0 0 164 164" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g id="Group" opacity="0.89">
                         <g id="Group_2" opacity="0.89">
@@ -430,7 +469,7 @@
                         </g>
                     </g>
                 </svg>
-                <svg class="ccs2" width="300" height="300" viewBox="0 0 164 164" fill="none"
+                <svg class="loops" id="loops-2" width="300" height="300" viewBox="0 0 164 164" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g id="Group" opacity="0.89">
                         <g id="Group_2" opacity="0.89">
@@ -495,7 +534,7 @@
                         </g>
                     </g>
                 </svg>
-                <svg class="ccs3" width="300" height="300" viewBox="0 0 164 164" fill="none"
+                <svg class="loops" id="loops-3" width="300" height="300" viewBox="0 0 164 164" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g id="Group" opacity="0.89">
                         <g id="Group_2" opacity="0.89">
@@ -560,14 +599,15 @@
                         </g>
                     </g>
                 </svg>
+                </div>
 
 
             </div>
         </section>
         <section class="video">
-                <video id="video" autoplay="true" muted="muted" loop>
-                    <source src="./images/The+promo+shoot+of+plexus,+making+video-_1.mp4" type="video/mp4">
-                  </video>
+            <video id="video" autoplay="true" muted="muted" loop>
+                <source src="./images/The+promo+shoot+of+plexus,+making+video-_1.mp4" type="video/mp4">
+            </video>
         </section>
         <section id="about-us" class="move-left">
             <div>
@@ -616,14 +656,12 @@
                 </div>
                 <div class="about-us">
                     <div>
-                        <img src="./images/Akhilesh.png"
-                            alt="Akhilesh">
+                        <img src="./images/Akhilesh.png" alt="Akhilesh">
                         <h5>B Akhilesh</h5>
                         <h6>Secretarie</h6>
                     </div>
                     <div>
-                        <img src="./images/Hyndhavi.png"
-                            alt="Hyndhavi">
+                        <img src="./images/Hyndhavi.png" alt="Hyndhavi">
                         <h5>M Hyndhavi</h5>
                         <h6>Secretaries</h6>
                     </div>
@@ -691,8 +729,7 @@
                 <h3 class="span2">Members of Association</h3>
                 <div class="about-us span2 rows">
                     <div>
-                        <img src="./images/Alekhya.png"
-                            alt="Alekhya">
+                        <img src="./images/Alekhya.png" alt="Alekhya">
                         <h5>A Alekhya</h5>
                         <h6>Member</h6>
                     </div>
@@ -703,14 +740,12 @@
                         <h6>Member</h6>
                     </div>
                     <div>
-                        <img src="./images/Bharani.png"
-                            alt="Bharani">
+                        <img src="./images/Bharani.png" alt="Bharani">
                         <h5>BL Bharani</h5>
                         <h6>Member</h6>
                     </div>
                     <div>
-                        <img src="./images/Vamshi.png"
-                            alt="Vamshi">
+                        <img src="./images/Vamshi.png" alt="Vamshi">
                         <h5>P Vamshi</h5>
                         <h6>Member</h6>
                     </div>
@@ -729,52 +764,115 @@
                 </div>
             </div>
         </section>
-        <section id="projects">
+        <section id="events">
+    <div  class="move-right">
+        <h1>Project</h1>
+        
+            <div onclick="window.location.href='./event/WORKSHOPS_AND_TECH_TALKS'">
+                <img src="./images/talk_logo.png" alt="">
+                <div>
+                    <h2>WORKSHOPS AND TECH TALKS</h2>
+                    <h5>February 1</h5>
+                    <h4>Tech Club</h4>
+                </div>
+            </div>
+        
+            <div onclick="window.location.href='./event/OPEN_SOURCE_CONTRIBUTIONS'">
+                <img src="./images/open_logo.png" alt="">
+                <div>
+                    <h2>OPEN SOURCE CONTRIBUTIONS</h2>
+                    <h5>February 15</h5>
+                    <h4>Tech Club</h4>
+                </div>
+            </div>
+        
+            <div onclick="window.location.href='./event/BOOK_CLUB'">
+                <img src="./images/book_logo.png" alt="">
+                <div>
+                    <h2>BOOK CLUB</h2>
+                    <h5>March 5</h5>
+                    <h4>Non Tech Club</h4>
+                </div>
+            </div>
+        
+            <div onclick="window.location.href='./event/FITNESS_CHALLENGES'">
+                <img src="./images/fitness_logo.png" alt="">
+                <div>
+                    <h2>FITNESS CHALLENGES</h2>
+                    <h5>March 20</h5>
+                    <h4>Sports Club</h4>
+                </div>
+            </div>
+        
+            <div onclick="window.location.href='./event/HACKATHONS_AND_CODING_COMPETITIONS'">
+                <img src="./images/hackathon_logo.png" alt="">
+                <div>
+                    <h2>HACKATHONS AND CODING COMPETITIONS</h2>
+                    <h5>January 15</h5>
+                    <h4>Tech Club</h4>
+                </div>
+            </div>
+        
+        <!-- <div>
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*AXF8IYKqC3Y7JxYRaUrCPQ.png" alt="">
             <div>
-                <h1>Project</h1>
+                <h2>Hackathons and Coding Competitions</h2>
+                <h4>Techincal Event</h4>
             </div>
-        </section>
+        </div>
+        <div>
+            <img src="https://olathens.gr/wp-content/uploads/2023/11/1.png" alt="">
+            <div>
+               <h2>Workshops and Tech Talks</h2>
+            <h4>Techincal Event</h4>
+           </div>
+        </div>
+        <div>
+            <img src="https://bugfender.com/wp-content/uploads/2022/09/Screenshot_2022-09-27_at_6.58.35_PM.png" alt="">
+            <div>
+                <h2>Open Source Contributions</h2>
+                <h4>Techincal Event</h4>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/1627657997/vector/stack-of-books-and-cup-of-coffee.jpg?s=612x612&w=0&k=20&c=BaoPIkC97eF1XC3u7v4xIsOzFrfoBWj3Z6X6nlPjvyk=" alt="">
+            <div>
+                <h2>Book Club</h2>
+                <h4>Non Techincal Event</h4>
+            </div>
+        </div>
+        <div>
+            <img src="https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2022/04/22105651/30-day-fitness-challenges-600-t-minus-30.png" alt="">
+            <div>
+                <h2>Fitness Challenges</h2>
+                <h4>Sports Event</h4>
+            </div>
+        </div> -->
+    </div>
+</section>
+        <br><br>
+<footer>
+    <div class="logo">
+        <img src="https://www.facultyplus.com/wp-content/uploads/2018/10/MRGI.png" alt="">
+        <img class="curve" src="./images/mrce.png" alt="MRCE-logo-PNG">
+        <img src="./logo-plexus.svg" alt="Plexus-SVG">
+    </div>
+    <div class="info">
+        <h3>Malla Reddy Group of Institutes</h3>
+        <h4>Malla Reddy College Of Engineering - [MRCE]</h4>
+        <p>Maisamaguda, Dhulapally, post via Kompally Secunderabad - 500100 Telangana, India</p>
+    </div>
 
-        <!-- <section id="event">
-            <h1>Events</h1>
-            <div id="events">
-                <div class="event">
-                    <img src="https://defabrique.nl/app/uploads/2017/05/Hackathon-DFE-1.jpg" alt="">
-                    <p class="centered">Testing</p>
-                </div>
-                <div class="event">
-                    <img src="https://defabrique.nl/app/uploads/2017/05/Hackathon-DFE-1.jpg" alt="">
-                    <p class="centered">Testing</p>
-                </div>
-                <div class="event">
-                    <img src="https://defabrique.nl/app/uploads/2017/05/Hackathon-DFE-1.jpg" alt="">
-                    <p class="centered">Testing</p>
-                </div>
-            </div>
-        </section> -->
+    <div class="images">
+        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/iso-31-logo.png">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
+            alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/National_Board_of_Accreditation.svg/1200px-National_Board_of_Accreditation.svg.png"
+            alt="">
+    </div>
+    <h5>Designed & Developed by <a href="https://github.com/Harshrb2424">Harsh RB</a></h5>
+</footer>
 
-
-        <footer>
-            <div class="logo">
-                <img src="https://www.facultyplus.com/wp-content/uploads/2018/10/MRGI.png" alt="">
-                <img class="curve" src="./images/mrce.png" alt="MRCE-logo-PNG">
-                <img src="./logo-plexus.svg" alt="Plexus-SVG">
-            </div>
-            <div class="info">
-                <h3>Malla Reddy Group of Institutes</h3>
-                <h4>Malla Reddy College Of Engineering - [MRCE]</h4>
-                <p>Maisamaguda, Dhulapally, post via Kompally Secunderabad - 500100 Telangana, India</p>
-            </div>
-
-            <div class="images">
-                <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/iso-31-logo.png">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
-                    alt="">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/National_Board_of_Accreditation.svg/1200px-National_Board_of_Accreditation.svg.png"
-                    alt="">
-            </div>
-            <h5>Designed & Developed by <a href="https://github.com/Harshrb2424">Harsh RB</a></h5>
-        </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -782,64 +880,71 @@
 
 
         $(document).ready(function () {
+            $("#onload").hide();
             setTimeout(function () {
                 $('.bg').fadeOut();
                 setTimeout(function () {
                     $('#loader').fadeOut();
                     $("#onload").fadeIn(2000);
                     $("body").removeClass("body-load");
-                    $('#video').on('click', function() {
+                    $('#video').on('click', function () {
                         var video = document.getElementById('video');
                         if (video.paused) {
                             $(video).animate({ opacity: 1 }, 200);
                             video.play();
                         } else {
                             $(video).animate({ opacity: 0.7 }, 200);
-                        video.pause();
+                            video.pause();
                         }
                     });
                 }, 500);
-            }, 500);
-            setTimeout(function() {
+            }, 2000);
+            setTimeout(function () {
                 $('html, body').animate({
                     scrollTop: $('#video').offset().top
-                }, 1000); 
+                }, 1000);
             }, 5000);
 
-            var $homeBg = $('.home-bg');
+            // var $homeBg = $('.home-bg');
 
-// Attach a scroll event handler to the window
-$(window).scroll(function() {
-  // Get the scroll position
-  var scrollY = $(this).scrollTop();
-    console.log(scrollY);
-  // Update the transform property of .home-bg
-  if (scrollY < 400) {
-    
-      $homeBg.css('transform', 'translateY(' + (scrollY/2) + 'px)');
-  }
-});
+            // // Attach a scroll event handler to the window
+            // $(window).scroll(function () {
+            //     // Get the scroll position
+            //     var scrollY = $(this).scrollTop();
+            //     console.log(scrollY);
+            //     // Update the transform property of .home-bg
+            //     if (scrollY < 400) {
+
+            //         $homeBg.css('transform', 'translateY(' + (scrollY / 2) + 'px)');
+            //     }
+            // });
 
 
-    $(".click-home").click(function() {
-        $('#home').fadeIn();
-        $('#video').fadeIn();
-        $('#about-us').fadeIn();
-        $('#projects').fadeIn();
-      });
+            $(".click-home").click(function () {
+                $('#home').fadeIn();
+                $('#video').fadeIn();
+                $('#about-us').fadeIn();
+                $('#projects').fadeIn();
+            });
 
-    $(".click-aboutUs").click(function() {
-        $('#home').fadeOut();
-        $('#video').fadeOut();
-        $('#about-us').fadeIn();
-        $('#projects').fadeOut();
-      });
-    $(".click-Projects").click(function() {
-        $('#home').fadeOut();
-        $('#video').fadeOut();
-        $('#about-us').fadeOut();
-        $('#projects').fadeIn();
-      });
+            $(".click-aboutUs").click(function () {
+                $('#home').fadeOut();
+                $('#video').fadeOut();
+                $('#about-us').fadeIn();
+                $('#projects').fadeOut();
+            });
+            $(".click-Projects").click(function () {
+                $('#home').fadeOut();
+                $('#video').fadeOut();
+                $('#about-us').fadeOut();
+                $('#projects').fadeIn();
+            });
+            $(".click-Login").click(function () {
+                window.location.href = "./auth/google";
+            });
+            // $("#events").click(function () {
+            //     window.location.href = "./event";
+            // });
 
         });
     </script>
