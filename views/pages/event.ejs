@@ -20,17 +20,15 @@
             <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
         </svg>
     </div>
+    <div class="bgImg">
+        <img src="<%= event["event_background_link"] %>" alt="">
+    </div>
     <section id="event-showcase">
         <% console.log("event"); %>
         <% console.log(event); %>
         <h1><%= event["event_title"] %></h1>
-        <!-- <h1>Plexus CodeFest 2024</h1> -->
         <h2><%= new Date(event["event_start_date"]).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }); %></h2>
-        <button>Register Now</button>
-        <div>
-            <img src="<%= event["event_background_link"] %>" alt="">
-            <div></div>
-        </div>
+        <button class="event-button">Register Now</button>
     </section>
     <section id="event-info">
         <h2>Overview:</h2>
@@ -104,5 +102,23 @@
         </div>
         <h5>Designed & Developed by <a href="https://github.com/Harshrb2424">Harsh RB</a></h5>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+
+
+
+          $('.click-home').on('click', function() {
+            window.location.href = '/#home';
+          });
+          $('.click-aboutUs').on('click', function() {
+            window.location.href = '/#about-us';
+          });
+          $('.click-events').on('click', function() {
+            window.location.href = '/#events';
+          });
+        });
+      </script>
 </body>
 </html>

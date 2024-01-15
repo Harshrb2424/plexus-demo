@@ -120,23 +120,23 @@ nav img {
   }
 }
 #circle-1 {
-  animation: waveAnimation 4s infinite alternate 3s;
+  animation: waveAnimation 7s infinite alternate 0s;
   left: 50px;
   scale: 0.6;
 }
 #circle-2 {
-  animation: waveAnimation 4s infinite alternate 5s;
+  animation: waveAnimation 9s infinite alternate 2s;
   left: 150px;
   scale: 2;
 }
 #circle-3 {
-  animation: waveAnimation 4s infinite alternate 1s;
+  animation: waveAnimation 14s infinite alternate 3s;
   top: 200px;
   left: 700px;
   scale: 3;
 }
 #circle-4 {
-  animation: waveAnimation 4s infinite alternate 7s;
+  animation: waveAnimation 6s infinite alternate 0.5s;
   top: 500px;
   scale: 1.5;
 }

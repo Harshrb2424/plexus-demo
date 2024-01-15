@@ -749,6 +749,17 @@
 
 
         $(document).ready(function () {
+
+            var hash = window.location.hash;
+            if (hash === '#about-us' || hash === '#events' || hash === '#home') {
+                $('#loader').hide();
+                scrollTop: $('body').offset()
+                setTimeout(() => {
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000);
+                }, 1000);
+            } else {
             $("#onload").hide();
             setTimeout(function () {
                 $('.bg').fadeOut();
@@ -756,7 +767,38 @@
                     $('#loader').fadeOut();
                     $("#onload").fadeIn(2000);
                     $("body").removeClass("body-load");
-                    $('#video').on('click', function () {
+                }, 500);
+            }, 2000);
+            // setTimeout(function () {
+            //     $('html, body').animate({
+            //         scrollTop: $('#video').offset().top
+            //     }, 1000);
+            // }, 5000);
+            
+            }
+
+            $('.click-home').on('click', function() {
+                setTimeout(() => {
+                    $('html, body').animate({
+                        scrollTop: $("body").offset().top
+                    }, 1000);
+                }, 100);
+          });
+          $('.click-aboutUs').on('click', function() {
+            setTimeout(() => {
+                    $('html, body').animate({
+                        scrollTop: $("#about-us").offset().top
+                    }, 1000);
+                }, 100);
+          });
+          $('.click-events').on('click', function() {
+            setTimeout(() => {
+                    $('html, body').animate({
+                        scrollTop: $("#events").offset().top
+                    }, 1000);
+                }, 100);
+          });
+            $('#video').on('click', function () {
                         var video = document.getElementById('video');
                         if (video.paused) {
                             $(video).animate({ opacity: 1 }, 200);
@@ -766,13 +808,7 @@
                             video.pause();
                         }
                     });
-                }, 500);
-            }, 2000);
-            setTimeout(function () {
-                $('html, body').animate({
-                    scrollTop: $('#video').offset().top
-                }, 1000);
-            }, 5000);
+
 
             // var $homeBg = $('.home-bg');
 
@@ -789,25 +825,25 @@
             // });
 
 
-            $(".click-home").click(function () {
-                $('#home').fadeIn();
-                $('#video').fadeIn();
-                $('#about-us').fadeIn();
-                $('#projects').fadeIn();
-            });
+            // $(".click-home").click(function () {
+            //     $('#home').fadeIn();
+            //     $('#video').fadeIn();
+            //     $('#about-us').fadeIn();
+            //     $('#projects').fadeIn();
+            // });
 
-            $(".click-aboutUs").click(function () {
-                $('#home').fadeOut();
-                $('#video').fadeOut();
-                $('#about-us').fadeIn();
-                $('#projects').fadeOut();
-            });
-            $(".click-Projects").click(function () {
-                $('#home').fadeOut();
-                $('#video').fadeOut();
-                $('#about-us').fadeOut();
-                $('#projects').fadeIn();
-            });
+            // $(".click-aboutUs").click(function () {
+            //     $('#home').fadeOut();
+            //     $('#video').fadeOut();
+            //     $('#about-us').fadeIn();
+            //     $('#projects').fadeOut();
+            // });
+            // $(".click-Projects").click(function () {
+            //     $('#home').fadeOut();
+            //     $('#video').fadeOut();
+            //     $('#about-us').fadeOut();
+            //     $('#projects').fadeIn();
+            // });
             $(".click-Login").click(function () {
                 window.location.href = "./auth/google";
             });

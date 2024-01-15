@@ -5,9 +5,9 @@
     </div>
     <div class="nav">
         <h3 class="click-aboutUs">About Us</h3>
-        <h3 class="click-Projects">Projects</h3>
+        <h3 class="click-events">Events</h3>
         <% if (locals.UserProfile.displayName) { %>
-            <img src="<%= UserProfile.photos[0].value %>" alt="">
+            <img src="<%= UserProfile.photos[0].value %>" alt="<%= UserProfile["displayName"] %>">
             <% } else { %>
                 <h3 class="click-Login">Login</h3>
           <% } %>
