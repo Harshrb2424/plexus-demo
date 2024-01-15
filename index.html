@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="./css/meta.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/loading.css" />
-    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
-    
-        <link rel="stylesheet" href="./css/index.css" />
-    
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="shortcut icon" href="./logo-plexus.svg" type="image/x-icon">
     <title>Plexus</title>
 </head>
@@ -812,42 +809,6 @@
                     <h4>Tech Club</h4>
                 </div>
             </div>
-        
-        <!-- <div>
-            <img src="https://miro.medium.com/v2/resize:fit:1200/1*AXF8IYKqC3Y7JxYRaUrCPQ.png" alt="">
-            <div>
-                <h2>Hackathons and Coding Competitions</h2>
-                <h4>Techincal Event</h4>
-            </div>
-        </div>
-        <div>
-            <img src="https://olathens.gr/wp-content/uploads/2023/11/1.png" alt="">
-            <div>
-               <h2>Workshops and Tech Talks</h2>
-            <h4>Techincal Event</h4>
-           </div>
-        </div>
-        <div>
-            <img src="https://bugfender.com/wp-content/uploads/2022/09/Screenshot_2022-09-27_at_6.58.35_PM.png" alt="">
-            <div>
-                <h2>Open Source Contributions</h2>
-                <h4>Techincal Event</h4>
-            </div>
-        </div>
-        <div>
-            <img src="https://media.istockphoto.com/id/1627657997/vector/stack-of-books-and-cup-of-coffee.jpg?s=612x612&w=0&k=20&c=BaoPIkC97eF1XC3u7v4xIsOzFrfoBWj3Z6X6nlPjvyk=" alt="">
-            <div>
-                <h2>Book Club</h2>
-                <h4>Non Techincal Event</h4>
-            </div>
-        </div>
-        <div>
-            <img src="https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2022/04/22105651/30-day-fitness-challenges-600-t-minus-30.png" alt="">
-            <div>
-                <h2>Fitness Challenges</h2>
-                <h4>Sports Event</h4>
-            </div>
-        </div> -->
     </div>
 </section>
         <br><br>
@@ -898,27 +859,13 @@
                         }
                     });
                 }, 500);
+
             }, 2000);
             setTimeout(function () {
                 $('html, body').animate({
                     scrollTop: $('#video').offset().top
                 }, 1000);
             }, 5000);
-
-            // var $homeBg = $('.home-bg');
-
-            // // Attach a scroll event handler to the window
-            // $(window).scroll(function () {
-            //     // Get the scroll position
-            //     var scrollY = $(this).scrollTop();
-            //     console.log(scrollY);
-            //     // Update the transform property of .home-bg
-            //     if (scrollY < 400) {
-
-            //         $homeBg.css('transform', 'translateY(' + (scrollY / 2) + 'px)');
-            //     }
-            // });
-
 
             $(".click-home").click(function () {
                 $('#home').fadeIn();
@@ -939,13 +886,10 @@
                 $('#about-us').fadeOut();
                 $('#projects').fadeIn();
             });
+
             $(".click-Login").click(function () {
                 window.location.href = "./auth/google";
             });
-            // $("#events").click(function () {
-            //     window.location.href = "./event";
-            // });
-
         });
     </script>
 </body>
