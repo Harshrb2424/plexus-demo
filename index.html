@@ -1,7 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/meta.css" />
@@ -11,7 +11,6 @@
     <link rel="shortcut icon" href="./logo-plexus.svg" type="image/x-icon">
     <title>Plexus</title>
 </head>
-
 <body class="body-load">
     <div id="loader">
         <svg width="100" height="100" viewBox="0 0 458 299" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -337,15 +336,18 @@
 
     <div id="onload">
         <nav>
-            <div class="logo click-home">
-                <img src="./logo-plexus.svg" alt="Plexus-SVG">
-                <h2>Plexus</h2>
-            </div>
-            <div>
-                <h3 class="click-aboutUs">About Us</h3>
-                <h3 class="click-Projects">Projects</h3>
-            </div>
-        </nav>
+    <div class="logo click-home">
+        <img src="./logo-plexus.svg" alt="Plexus-SVG">
+        <h2>Plexus</h2>
+    </div>
+    <div class="nav">
+        <h3 class="click-aboutUs">About Us</h3>
+        <h3 class="click-Projects">Projects</h3>
+        
+                <h3 class="click-Login">Login</h3>
+          
+    </div>
+</nav>
         <div class="circles">
             <svg id="circle-1" class="circle" width="200" height="200">
                 <circle cx="100" cy="100" r="100" stroke="black" stroke-width="3" fill="red" />
@@ -760,86 +762,78 @@
             </div>
         </section>
         <section id="events">
-            <div  class="move-right">
-                <h1>Project</h1>
+    <div  class="move-right">
+        <h1>Project</h1>
+        
+            <div onclick="window.location.href='./event/WORKSHOPS_AND_TECH_TALKS'">
+                <img src="./images/talk_logo.png" alt="">
                 <div>
-                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*AXF8IYKqC3Y7JxYRaUrCPQ.png" alt="">
-                    <div>
-                        <h2>Hackathons and Coding Competitions</h2>
-                        <h4>Techincal Event</h4>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://olathens.gr/wp-content/uploads/2023/11/1.png" alt="">
-                    <div>
-                       <h2>Workshops and Tech Talks</h2>
-                    <h4>Techincal Event</h4>
-                   </div>
-                </div>
-                <div>
-                    <img src="https://bugfender.com/wp-content/uploads/2022/09/Screenshot_2022-09-27_at_6.58.35_PM.png" alt="">
-                    <div>
-                        <h2>Open Source Contributions</h2>
-                        <h4>Techincal Event</h4>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://media.istockphoto.com/id/1627657997/vector/stack-of-books-and-cup-of-coffee.jpg?s=612x612&w=0&k=20&c=BaoPIkC97eF1XC3u7v4xIsOzFrfoBWj3Z6X6nlPjvyk=" alt="">
-                    <div>
-                        <h2>Book Club</h2>
-                        <h4>Non Techincal Event</h4>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2022/04/22105651/30-day-fitness-challenges-600-t-minus-30.png" alt="">
-                    <div>
-                        <h2>Fitness Challenges</h2>
-                        <h4>Sports Event</h4>
-                    </div>
+                    <h2>WORKSHOPS AND TECH TALKS</h2>
+                    <h5>February 1</h5>
+                    <h4>Tech Club</h4>
                 </div>
             </div>
-        </section>
-
-        <!-- <section id="event">
-            <h1>Events</h1>
-            <div id="events">
-                <div class="event">
-                    <img src="https://defabrique.nl/app/uploads/2017/05/Hackathon-DFE-1.jpg" alt="">
-                    <p class="centered">Testing</p>
-                </div>
-                <div class="event">
-                    <img src="https://defabrique.nl/app/uploads/2017/05/Hackathon-DFE-1.jpg" alt="">
-                    <p class="centered">Testing</p>
-                </div>
-                <div class="event">
-                    <img src="https://defabrique.nl/app/uploads/2017/05/Hackathon-DFE-1.jpg" alt="">
-                    <p class="centered">Testing</p>
+        
+            <div onclick="window.location.href='./event/OPEN_SOURCE_CONTRIBUTIONS'">
+                <img src="./images/open_logo.png" alt="">
+                <div>
+                    <h2>OPEN SOURCE CONTRIBUTIONS</h2>
+                    <h5>February 15</h5>
+                    <h4>Tech Club</h4>
                 </div>
             </div>
-        </section> -->
-
+        
+            <div onclick="window.location.href='./event/BOOK_CLUB'">
+                <img src="./images/book_logo.png" alt="">
+                <div>
+                    <h2>BOOK CLUB</h2>
+                    <h5>March 5</h5>
+                    <h4>Non Tech Club</h4>
+                </div>
+            </div>
+        
+            <div onclick="window.location.href='./event/FITNESS_CHALLENGES'">
+                <img src="./images/fitness_logo.png" alt="">
+                <div>
+                    <h2>FITNESS CHALLENGES</h2>
+                    <h5>March 20</h5>
+                    <h4>Sports Club</h4>
+                </div>
+            </div>
+        
+            <div onclick="window.location.href='./event/HACKATHONS_AND_CODING_COMPETITIONS'">
+                <img src="./images/hackathon_logo.png" alt="">
+                <div>
+                    <h2>HACKATHONS AND CODING COMPETITIONS</h2>
+                    <h5>January 15</h5>
+                    <h4>Tech Club</h4>
+                </div>
+            </div>
+    </div>
+</section>
         <br><br>
-        <footer>
-            <div class="logo">
-                <img src="https://www.facultyplus.com/wp-content/uploads/2018/10/MRGI.png" alt="">
-                <img class="curve" src="./images/mrce.png" alt="MRCE-logo-PNG">
-                <img src="./logo-plexus.svg" alt="Plexus-SVG">
-            </div>
-            <div class="info">
-                <h3>Malla Reddy Group of Institutes</h3>
-                <h4>Malla Reddy College Of Engineering - [MRCE]</h4>
-                <p>Maisamaguda, Dhulapally, post via Kompally Secunderabad - 500100 Telangana, India</p>
-            </div>
+<footer>
+    <div class="logo">
+        <img src="https://www.facultyplus.com/wp-content/uploads/2018/10/MRGI.png" alt="">
+        <img class="curve" src="./images/mrce.png" alt="MRCE-logo-PNG">
+        <img src="./logo-plexus.svg" alt="Plexus-SVG">
+    </div>
+    <div class="info">
+        <h3>Malla Reddy Group of Institutes</h3>
+        <h4>Malla Reddy College Of Engineering - [MRCE]</h4>
+        <p>Maisamaguda, Dhulapally, post via Kompally Secunderabad - 500100 Telangana, India</p>
+    </div>
 
-            <div class="images">
-                <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/iso-31-logo.png">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
-                    alt="">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/National_Board_of_Accreditation.svg/1200px-National_Board_of_Accreditation.svg.png"
-                    alt="">
-            </div>
-            <h5>Designed & Developed by <a href="https://github.com/Harshrb2424">Harsh RB</a></h5>
-        </footer>
+    <div class="images">
+        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/iso-31-logo.png">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
+            alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/National_Board_of_Accreditation.svg/1200px-National_Board_of_Accreditation.svg.png"
+            alt="">
+    </div>
+    <h5>Designed & Developed by <a href="https://github.com/Harshrb2424">Harsh RB</a></h5>
+</footer>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -847,6 +841,7 @@
 
 
         $(document).ready(function () {
+            $("#onload").hide();
             setTimeout(function () {
                 $('.bg').fadeOut();
                 setTimeout(function () {
@@ -864,27 +859,13 @@
                         }
                     });
                 }, 500);
-            }, 500);
+
+            }, 2000);
             setTimeout(function () {
                 $('html, body').animate({
                     scrollTop: $('#video').offset().top
                 }, 1000);
             }, 5000);
-
-            // var $homeBg = $('.home-bg');
-
-            // // Attach a scroll event handler to the window
-            // $(window).scroll(function () {
-            //     // Get the scroll position
-            //     var scrollY = $(this).scrollTop();
-            //     console.log(scrollY);
-            //     // Update the transform property of .home-bg
-            //     if (scrollY < 400) {
-
-            //         $homeBg.css('transform', 'translateY(' + (scrollY / 2) + 'px)');
-            //     }
-            // });
-
 
             $(".click-home").click(function () {
                 $('#home').fadeIn();
@@ -905,10 +886,10 @@
                 $('#about-us').fadeOut();
                 $('#projects').fadeIn();
             });
-            $("#events").click(function () {
-                window.location.href = "./event";
-            });
 
+            $(".click-Login").click(function () {
+                window.location.href = "./auth/google";
+            });
         });
     </script>
 </body>
