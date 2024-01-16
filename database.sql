@@ -6,11 +6,10 @@ CREATE TABLE plexus_events (
     end_date TIMESTAMP,
     location VARCHAR(255),
     organization VARCHAR(100),
-    event_image VARCHAR(255),  -- Link to event image
-    event_background VARCHAR(255),  -- Link to event background
+    event_image VARCHAR(255),
+    event_background VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 
 CREATE TABLE plexus_organizations (
     id SERIAL PRIMARY KEY,
